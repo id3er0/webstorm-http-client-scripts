@@ -12,6 +12,8 @@ npm i
 HTTP Client file.
 
 ### `src/request.ts`
+TS file to test that everything works fine in Node.js.
+
 ```npm
 npm run request
 ```
