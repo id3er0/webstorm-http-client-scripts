@@ -1,0 +1,15 @@
+### Import "qs" library here
+< {%
+  import qs from 'qs';
+  const queryParams = { userId: 1 };
+  const queryString = qs.stringify(queryParams);
+  request.variables.set("query", queryString);
+%}
+GET https://jsonplaceholder.typicode.com/posts?{{query}}
+
+### Import outside
+< {%
+  import queryString from './query-string.ts';
+  request.variables.set("query", queryString);
+%}
+GET https://jsonplaceholder.typicode.com/posts?{{query}}
